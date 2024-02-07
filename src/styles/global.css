@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-gray-800;
+  }
+  body {
+    @apply overflow-x-hidden;
+  }
+  [type="text"],
+  input:where(:not([type])),
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    @apply rounded border-gray-200;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
+    appearance: none;
+  }
+  .form-control {
+    @apply grid;
+  }
+  .form-control input,
+  .form-control select {
+    @apply w-full;
+  }
+  .form-control label {
+    @apply mb-1 block font-medium;
+  }
+  .form-control .helper-text {
+    @apply mt-0.5 text-xs font-normal text-gray-500 sm:text-sm;
+  }
+  .form-control.error input,
+  .form-control.error select {
+    @apply border-red-600;
+  }
+  .form-control.error .helper-text {
+    @apply text-red-600;
+  }
+  .form-control.warning input,
+  .form-control.warning select {
+    @apply border-yellow-600;
+  }
+  .form-control.warning .helper-text {
+    @apply text-yellow-600;
+  }
+}
+
+@layer components {
+  .content-wrapper {
+    @apply mx-auto w-full max-w-screen-xl px-4 py-8 sm:px-8;
+  }
+  .paper {
+    @apply bg-white bg-gradient-to-br from-neutral-50/40 to-neutral-100/70;
+    box-shadow:
+      0px 1px 3px rgba(0, 0, 0, 0.1),
+      0px 6px 12px rgba(0, 0, 0, 0.08);
+  }
+  .btn {
+    @apply flex items-center justify-center gap-2 rounded border bg-gradient-to-br from-sky-500 to-indigo-800 bg-left-top px-3 py-2 text-center font-bold capitalize text-white hover:bg-right-bottom disabled:pointer-events-none disabled:opacity-50;
+    background-size: 400%;
+    transition:
+      background-position 0.4s,
+      color 0.4s,
+      box-shadow 0.4s ease-in,
+      opacity 0.4s;
+  }
+  .btn.btn-outlined {
+    @apply border-indigo-700 bg-white bg-gradient-to-br from-white to-neutral-100/90 text-indigo-700 hover:border-indigo-900 hover:text-indigo-900;
+  }
+}
+
+@layer utilities {
+  .shadow-natural {
+    box-shadow:
+      0px 1px 3px rgba(0, 0, 0, 0.1),
+      0px 6px 12px rgba(0, 0, 0, 0.08);
+  }
+}
