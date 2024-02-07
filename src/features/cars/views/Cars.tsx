@@ -4,7 +4,7 @@ import FilteredCarList from "../components/FilteredCarList/FilteredCarList";
 const Cars = () => {
   return (
     <>
-      <div className="bg-gradient-to-br from-sky-600 to-indigo-800 py-4 shadow-lg">
+      <div className="bg-gradient-to-br from-sky-600 to-indigo-800 p-4 shadow-lg">
         <div className="content-wrapper grid gap-10">
           <header>
             <h1 className="mb-4 text-5xl font-bold text-neutral-50">
