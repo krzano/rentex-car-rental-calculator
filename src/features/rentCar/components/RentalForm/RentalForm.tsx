@@ -7,6 +7,7 @@ import Datepicker from "@/components/Datepicker/Datepicker";
 import rentalFormSchema, {
   RentalFormValues,
 } from "@/libs/yup/schemas/rentalForm";
+import { MIN_PREMIUM_CAR_RENTAL_YEARS } from "@/constants/data";
 
 const RentalForm = () => {
   const dispatch = useAppDispatch();
@@ -98,7 +99,7 @@ const RentalForm = () => {
           values.drivingLicenseIssueDate === drivingLicenseIssueDate &&
           !isPremiumCarRentalPossible &&
           selectedCarCategory === "premium"
-            ? "The premium cars can not be rented to drivers with less than 3 years of experience"
+            ? `The premium cars can not be rented to drivers with less than ${MIN_PREMIUM_CAR_RENTAL_YEARS} years of experience`
             : touched.drivingLicenseIssueDate
               ? errors.drivingLicenseIssueDate
               : undefined

@@ -4,6 +4,7 @@ import {
   INEXPERIENCED_DRIVER_FEE_RATE,
   LIMITED_AVAILABILITY_FEE_RATE,
   MIN_CARS_NUMBER_TO_AVOID_AVAILABILITY_FEE,
+  MIN_PREMIUM_CAR_RENTAL_YEARS,
   TAX_RATE,
 } from "@/constants/data";
 import dayjs from "dayjs";
@@ -147,7 +148,7 @@ const CostSummary = () => {
         <BlurCostInfoBox>
           <h3>
             <span>Premium</span> cars cannot be rented to a driver who has held
-            a license for less than 3 years. To proceed, choose a car from
+            a license for less than {MIN_PREMIUM_CAR_RENTAL_YEARS} years. To proceed, choose a car from
             categories such as <span className="font-bold">Basic, </span>
             <span className="font-bold">Standard</span> or{" "}
             <span className="font-bold">Medium</span>
