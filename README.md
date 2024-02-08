@@ -31,6 +31,18 @@ Selected car data needed for calculation:
 - average fuel consumption
 - car category
 
+### Calculation
+
+- Based on the car category we calculate the multiplied rental price for one day, and we multiply it by the number of days for which user will rent the car
+- Then we calculate the extra fees:
+- - If the user has a driver's license for less than 5 years, we increase the cost by 20%
+- - If the selected car's availability is less than 3 cars, we increase the cost by 15%.
+- Then we calucalte the estimated fuel cost with the followng formula: _((estimated number of kilometers to travel) / 100) x (selected car's average fuel consumption per 100km) x (current fuel price)_
+- Then we add the estimated fuel cost to the base rental price with extra fees and the result of the calculations is the Subtotal (net price)
+- Finally we add 23% of tax and the final result is Total (gross price)
+
+_All the variables needed for calcualtion (like: tax rate, fee rates, minimum number of driving experience years to not pay extra fee, etc.) are stored in one place in the data.ts file. This allowes us to easily change the data in one place if any of the requirements changes (for example if the limited car availability fee changes from 15% to 20%) without a need to searching the codebase to change every file which uses this value._
+
 ## Setup
 
 Download or clone this repository.

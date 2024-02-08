@@ -31,7 +31,7 @@ const RentCar = () => {
             <RentalForm />
           </RentCarSection>
         </div>
-        <div className="md:h-screen">
+        <div className="md:h-full">
           <div className="sticky top-28">
             <RentCarSection title="Cost summary">
               <CostSummary />
