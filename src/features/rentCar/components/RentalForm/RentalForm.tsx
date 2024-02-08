@@ -160,11 +160,7 @@ const RentalForm = () => {
         />
       </FormControl>
       <div className="grid grid-cols-2 gap-3">
-        <button
-          type="submit"
-          disabled={!dirty}
-          className="btn enabled:hover:shadow-natural"
-        >
+        <button type="submit" disabled={!dirty} className="btn">
           {rentalPeriod.endDate ? "Recalculate" : "Calculate"}
         </button>
         <button

@@ -12,6 +12,8 @@ import getMultipliedDailyPrice from "@/utils/getMultipliedDailyPrice";
 import CostComponent from "./components/CostComponent/CostComponent";
 import { CarData } from "@/types";
 import BlurCostInfoBox from "./components/BlurCostInfoBox/BlurCostInfoBox";
+import { Link } from "react-router-dom";
+import { RoutePaths } from "@/constants/routes";
 
 interface CalculateRentalDaysParams {
   rentStartDate: string;
@@ -111,7 +113,7 @@ const CostSummary = () => {
     return (
       <>
         <BlurCostInfoBox>
-          <h3>
+          <h3 className="px-6">
             Fill out the form and press the{" "}
             <span className="font-bold">Calculate</span> button to see the cost
             summary
@@ -148,11 +150,15 @@ const CostSummary = () => {
         <BlurCostInfoBox>
           <h3>
             <span>Premium</span> cars cannot be rented to a driver who has held
-            a license for less than {MIN_PREMIUM_CAR_RENTAL_YEARS} years. To proceed, choose a car from
-            categories such as <span className="font-bold">Basic, </span>
+            a license for less than {MIN_PREMIUM_CAR_RENTAL_YEARS} years. To
+            proceed, choose a car from categories such as{" "}
+            <span className="font-bold">Basic, </span>
             <span className="font-bold">Standard</span> or{" "}
             <span className="font-bold">Medium</span>
           </h3>
+          <Link to={RoutePaths.CARS} className="btn btn-outlined upp text-sm">
+            back to car list
+          </Link>
         </BlurCostInfoBox>
       ) : null}
       <div className="grid gap-3">

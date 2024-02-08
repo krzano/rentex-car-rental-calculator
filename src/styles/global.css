@@ -75,7 +75,7 @@
       0px 6px 12px rgba(0, 0, 0, 0.08);
   }
   .btn {
-    @apply flex items-center justify-center gap-2 rounded border bg-gradient-to-br from-sky-500 to-indigo-800 bg-left-top px-3 py-2 text-center font-bold capitalize text-white hover:bg-right-bottom disabled:pointer-events-none disabled:opacity-50;
+    @apply hover:shadow-natural flex items-center justify-center gap-2 rounded border bg-gradient-to-br from-sky-500 to-indigo-800 bg-left-top px-3 py-2 text-center font-bold capitalize text-white hover:bg-right-bottom disabled:pointer-events-none disabled:opacity-50;
     background-size: 400%;
     transition:
       background-position 0.4s,
@@ -84,7 +84,8 @@
       opacity 0.4s;
   }
   .btn.btn-outlined {
-    @apply border-indigo-700 bg-white bg-gradient-to-br from-white to-neutral-100/90 text-indigo-700 hover:border-indigo-900 hover:text-indigo-900;
+    background-size: 800%;
+    @apply border-indigo-900 bg-white bg-gradient-to-br from-white via-neutral-100/50 to-blue-200/50 text-indigo-900 hover:border-indigo-950 hover:text-indigo-950;
   }
 }
 
