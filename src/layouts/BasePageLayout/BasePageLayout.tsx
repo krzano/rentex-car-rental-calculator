@@ -11,7 +11,7 @@ const BasePageLayout = () => {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="w-screen">
         <Outlet />
       </main>
     </>

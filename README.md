@@ -8,6 +8,8 @@
 
 In this project user can select one of the cars from the list, and then submit the rental form to see the estimated rent price and price components.
 
+Because we display the list of different cars, to improve the user experience I decided to add filtering functionality, so the user can filter cars by **Category**, **Producer name** (e.g.: Fiat, Toyota etc.) and **Location**.
+
 The information we need from user to calculate the cost:
 
 - Estimated number of kilometers to travel
@@ -28,8 +30,6 @@ Selected car data needed for calculation:
 - number of available cars
 - average fuel consumption
 - car category
-
-Because we display the list of different cars, to improve the user experience I decided to add filtering functionality, so the user can filter cars by **Category**, **Producer name** (e.g.: Fiat, Toyota etc.) and **Location**.
 
 ## Setup
 

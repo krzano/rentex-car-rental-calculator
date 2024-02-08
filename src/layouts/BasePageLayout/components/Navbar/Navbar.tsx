@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav
       className={`bg sticky top-0 z-50 w-screen border-b border-gray-200 bg-white transition-shadow ease-in-out ${!isTop && "shadow-natural"}`}
     >
-      <div className="mx-auto flex max-w-screen-xl px-4 py-2 md:px-8 md:py-3">
+      <div className="content-wrapper py-3">
         <Link to={RoutePaths.HOME}>
           <img src={logo} alt="Rentex logo" className="h-10 md:h-12" />
         </Link>

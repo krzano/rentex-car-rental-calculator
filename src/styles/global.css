@@ -66,7 +66,7 @@
 
 @layer components {
   .content-wrapper {
-    @apply mx-auto w-full max-w-screen-xl px-4 py-8 sm:px-8;
+    @apply mx-auto w-[90vw] max-w-screen-xl px-4 py-8 sm:px-8;
   }
   .paper {
     @apply bg-white bg-gradient-to-br from-neutral-50/40 to-neutral-100/70;
